@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 591c86da619354949a118c29ad8322a3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - item: {instanceID: 0}
+  - temp: {fileID: 5266605151605206661, guid: 205e474fe0d9fe04f83c839e0b1238b1, type: 3}
+  - itemHolderParent: {instanceID: 0}
+  - draggedImage: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - PatrolSpots
+  - Pencil
+  - Walls
+  - MoveTrigger
+  - Item
+  - Backpack
+  - Inventory
+  - Floor
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - line
+  - player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: item2
+    uniqueID: 1957291231
+    locked: 0
+  - name: items
+    uniqueID: 3582812775
+    locked: 0
+  - name: player
+    uniqueID: 2223350163
+    locked: 0
+  - name: line
+    uniqueID: 4075418327
+    locked: 0

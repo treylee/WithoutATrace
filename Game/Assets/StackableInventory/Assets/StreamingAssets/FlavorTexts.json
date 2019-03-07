@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Broken Glass",
+    "description": "Walk a mile in another person's shoes.",
+    "price": 111,
+    "type": "Glass"
+  },
+  {
+    "name": "Cereal Box Empty",
+    "description": "Don't stop believing.",
+    "price": 222,
+    "type": "Paper"
+  },
+  {
+    "name": "Clamshell Packaging",
+    "description": "Can't cut the mustard.",
+    "price": 333,
+    "type": "Plastic"
+  },
+  {
+    "name": "Eggshells",
+    "description": "Never look down on someone unless you're helping them up.",
+    "price": 444,
+    "type": "Compost"
+  },
+  {
+    "name": "Foam Cup",
+    "description": "Leave it all to me.",
+    "price": 555,
+    "type": "Plastic"
+  },
+  {
+    "name": "Glass Jar",
+    "description": "Work now, party later.",
+    "price": 666,
+    "type": "Glass"
+  },
+  {
+    "name": "Glass Bottle",
+    "description": "Cool beans.",
+    "price": 777,
+    "type": "Glass"
+  },
+  {
+    "name": "Metal Can",
+    "description": "Every good bear does fine.",
+    "price": 888,
+    "type": "Metal"
+  },
+  {
+    "name": "Metal Lid",
+    "description": "Never eat shredded wheat.",
+    "price": 999,
+    "type": "Metal"
+  },
+  {
+    "name": "Packing Peanuts",
+    "description": "Rise to the occasion.",
+    "price": 112,
+    "type": "Plastic"
+  },
+  {
+    "name": "Paper Egg Carton",
+    "description": "Let them eat cake.",
+    "price": 123,
+    "type": "Paper"
+  },
+  {
+    "name": "Phonebook",
+    "description": "Two roads diverged in a yellow wood.",
+    "price": 123,
+    "type": "Paper"
+  },
+  {
+    "name": "Plastic Bottle",
+    "description": "Take flight.",
+    "price": 123,
+    "type": "Plastic"
+  },
+  {
+    "name": "Soda Can",
+    "description": "Empty your cup.",
+    "price": 123,
+    "type": "Metal"
+  }
+
+]
