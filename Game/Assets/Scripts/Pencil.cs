@@ -31,10 +31,11 @@ public class Pencil : MonoBehaviour
         //line.positionCount = 1;
         //line.material = m1;
 
-        line.startWidth = 1;
-        line.endWidth = 1;
-        line.startColor = Color.white;
-        line.endColor = Color.white;
+        line.startWidth = 0.5f;
+        
+        line.endWidth = 0.5f;
+       // line.startColor = Color.white;
+       // line.endColor = Color.white;
         firstPoint = 0;
         // playerPos = GameObject.FindGameObjectWithTag("Player").transform;
         start = false;
@@ -65,38 +66,12 @@ public class Pencil : MonoBehaviour
            
             if (!drawPoints.Contains(castPoint) && start)
             {
-                /*if (line_material)
-                {
-                    line_material = false;
-                    line.material = m1;
-                }
-                else
-                {
-                    line_material = true;
-
-                    line.material = m2;
-                }*/
-
-                /*     Debug.Log("the player position is: " + player.transform.position);
-                     Debug.Log("mouse position:  " + mouse);
-                     Debug.Log("cam position: " + castPoint);
-                  */
-                
-                //line.SetPosition(0, newPosition);
-
+            
                 drawPoints.Add(castPoint);
                 line.positionCount++;
-               // Vector2 newPosition = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                line.material.SetTextureOffset("_MainTex", new Vector2(Time.timeSinceLevelLoad * 4f, 0f));
-                line.material.SetTextureScale("_MainTex", new Vector2(castPoint.magnitude, 1f));
-               // line.SetPosition(0, newPosition);
-
-           
+             
                 line.SetPosition(line.positionCount - 1, castPoint);
-           
-                // drawLine();
-                // line.positionCount = 0;
-
+        
             }
 
 
