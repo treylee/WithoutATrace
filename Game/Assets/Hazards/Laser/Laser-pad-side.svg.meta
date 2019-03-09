@@ -1,15 +1,18 @@
 fileFormatVersion: 2
-guid: 00b19d9eab23ca4458389b0784b907cb
+guid: f3e1f65428c21614bb5cf3352e1e62e1
 ScriptedImporter:
   fileIDToRecycleName:
-    2800000: tex
+    100000: gameObject/Laser-pad-side
+    400000: gameObject/Laser-pad-side/Transform
+    21200000: gameObject/Laser-pad-side/SpriteRenderer
     21300000: sprite
+    100100000: gameObject
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: a57477913897c46af95d590f580878bd, type: 3}
-  svgType: 1
+  svgType: 0
   texturedSpriteMeshType: 0
   svgPixelsPerUnit: 100
   gradientResolution: 128
@@ -48,5 +51,5 @@ ScriptedImporter:
         y: 0
         width: 0
         height: 0
-      spriteID: 7ef03d1e25c4542438a9a448318d83d1
+      spriteID: 192951e7220516c44b0fab5ad497d711
     PhysicsOutlines: []
