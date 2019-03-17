@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0f66d742cb6c04a7892350dfeb1e5f12
+guid: ecbe5e4e123f18940a57ef876f45e344
 ScriptedImporter:
   fileIDToRecycleName:
     2800000: tex
@@ -37,16 +37,16 @@ ScriptedImporter:
   spriteData:
     TessellationDetail: 0
     SpriteRect:
-      name: 
+      name: Menu-Settings.1Sprite
       originalName: 
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.50005597, y: 0.5000557}
       alignment: 0
       border: {x: 0, y: 0, z: 0, w: 0}
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 0
-        height: 0
-      spriteID: c769bb3abda084b399884b2c474f76a4
+        width: 100
+        height: 100
+      spriteID: 3b169b87c2fbdf34aacdd96561c8a176
     PhysicsOutlines: []

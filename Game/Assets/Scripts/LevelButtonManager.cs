@@ -13,4 +13,8 @@ public class LevelButtonManager : MonoBehaviour
 
 
     }
+    public void home()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
