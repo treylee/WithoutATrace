@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Game/Assets/Buttons.meta
 guid: 22eb49fe66dfff444a1b4a8d4c4ee0cd
+=======
+guid: 12ff8c49365e4d14ea0c1f65f51e8457
+>>>>>>> 36481ebd1b00dd127787121076545967e188fa8a:Game/Assets/Buttons.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
