@@ -16,6 +16,8 @@ public class Pencil : MonoBehaviour
     private Material m1, m2;
     bool start ;
     bool line_material;
+    public int one_line;
+    
     void Start()
     {
         drawing = false;
@@ -28,6 +30,8 @@ public class Pencil : MonoBehaviour
          player = GameObject.FindGameObjectWithTag("Player");
         p = player.GetComponent<PlayerController>();
         canDraw = false;
+        //panel = GameObject.Find("line_incompelete_panel");
+        one_line = 0;
         //line.positionCount = 1;
         //line.material = m1;
 
@@ -44,53 +48,57 @@ public class Pencil : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if (Input.GetMouseButton(0) && !p.moving)
+        if (one_line == 0)
         {
-            drawing = true;
-            canDraw = true;
-
-            Vector3 mouse = Input.mousePosition;
-            Vector3 castPoint = Camera.main.ScreenToWorldPoint(mouse);
-            castPoint.z = 5;
-           
-
-            //Debug.Log("Held");
-            Vector2 mouseposition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-            Vector3 ppos = player.transform.position;//Vector3 objposition = Camera.main.ScreenToWorldPoint(mouseposition);
-            if (ppos.x <= castPoint.x + 1.2 && ppos.x >= castPoint.x - 1.2 && ppos.y <= castPoint.y + 1 && ppos.y >= castPoint.y - 3)
+            if (Input.GetMouseButton(0) && !p.moving)
             {
-                start = true;
+                drawing = true;
+                canDraw = true;
+
+                Vector3 mouse = Input.mousePosition;
+                Vector3 castPoint = Camera.main.ScreenToWorldPoint(mouse);
+                castPoint.z = 5;
+
+
+                //Debug.Log("Held");
+                Vector2 mouseposition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+                Vector3 ppos = player.transform.position;//Vector3 objposition = Camera.main.ScreenToWorldPoint(mouseposition);
+                if (ppos.x <= castPoint.x + 1.2 && ppos.x >= castPoint.x - 1.2 && ppos.y <= castPoint.y + 1 && ppos.y >= castPoint.y - 3)
+                {
+                    start = true;
+                }
+                //transform.position = objposition;
+
+                if (!drawPoints.Contains(castPoint) && start)
+                {
+
+                    drawPoints.Add(castPoint);
+                    line.positionCount++;
+                    
+                    line.SetPosition(line.positionCount - 1, castPoint);
+
+                }
+
+
             }
-            //transform.position = objposition;
-           
-            if (!drawPoints.Contains(castPoint) && start)
-            {
             
-                drawPoints.Add(castPoint);
-                line.positionCount++;
-             
-                line.SetPosition(line.positionCount - 1, castPoint);
-        
-            }
-
-
-        }
-        else
-        {
-            if (drawing && !p.moving)
+            
+            else if (Input.GetMouseButtonUp(0))
             {
-                // player.speed = 10;
-                p.speed = 10;
-                drawing = false;
+                one_line++;
+                if (drawing && !p.moving)
+                {
+                    // player.speed = 10;
+                    p.speed = 10;
+                    drawing = false;
 
-                // Debug.Log("Drawing is now false");
-                start = false;
-               // line.positionCount = 0;
+                    // Debug.Log("Drawing is now false");
+                    start = false;
+                    // line.positionCount = 0;
 
+                }
             }
         }
-  
     }
    /* void drawLine()
     {

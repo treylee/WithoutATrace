@@ -12,6 +12,8 @@ TagManager:
   - Backpack
   - Inventory
   - Floor
+  - one_line_panel
+  - last_door_camer_movement
   layers:
   - Default
   - TransparentFX

@@ -20,12 +20,14 @@ public class PlayerController : MonoBehaviour {
     private GameObject curItem;
     private GameObject backpack;
     Pencil p;
+    public GameObject panel;
 
     public float step;
     private bool faceright;
     public float movem;
     private bool pickup;
     public bool stop;
+ 
     //private int itemScale = 0;
 
     private void Start()
@@ -34,6 +36,7 @@ public class PlayerController : MonoBehaviour {
         movem = 0;
         stop = false;
         animator = GetComponent<Animator>();
+      
         speed = 0;
         moving = false;
         drawing = false;
@@ -164,6 +167,8 @@ public class PlayerController : MonoBehaviour {
             {
                 //Debug.Log("dead");
                 //lineRenderer.SetPositions(new Vector3[0]);
+                if(p.one_line > 0)
+                panel.SetActive(true);
                 stopPlayer();
                 
             }
@@ -186,7 +191,7 @@ public class PlayerController : MonoBehaviour {
         {
             for (int i = 0; i < drawPoints.Count-1; i++)
             {
-                Debug.Log(drawPoints[i]);
+                //Debug.Log(drawPoints[i]);
                 lineRenderer.positionCount = 0;
             }
         }
