@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour {
     public float movem;
     private bool pickup;
     public bool stop;
- 
+    
     //private int itemScale = 0;
 
     private void Start()
@@ -169,6 +169,8 @@ public class PlayerController : MonoBehaviour {
                 //lineRenderer.SetPositions(new Vector3[0]);
                 if(p.one_line > 0)
                 panel.SetActive(true);
+
+
                 stopPlayer();
                 
             }

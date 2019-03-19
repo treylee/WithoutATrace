@@ -10,6 +10,8 @@ public class RoomMove : MonoBehaviour
     private CameraMovement cam;
     private PlayerController player;
     private Pencil pencil;
+    
+   //public GameObject 
     // Start is called before the first frame update
     void Start()
     {
@@ -34,8 +36,10 @@ public class RoomMove : MonoBehaviour
     {
         //Debug.Log(other.name);
         //Debug.Log("Detects collision");
+        
         if (other.name == ("Player"))
         {
+
             //Debug.Log("Detects collision with tag 'player'");
             cam.minPosition += cameraChange;
             cam.maxPosition += cameraChange;

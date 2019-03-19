@@ -14,6 +14,7 @@ TagManager:
   - Floor
   - one_line_panel
   - last_door_camer_movement
+  - winning_pop_up
   layers:
   - Default
   - TransparentFX
