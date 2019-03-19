@@ -3,6 +3,7 @@
 Updated: March 2019
 
 UCSC Computer Science 2018-2019
+
 Senior Design Capstone (CMPS116)
 
 Background:
