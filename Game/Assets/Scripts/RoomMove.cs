@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RoomMove : MonoBehaviour
 {
-    public Vector2 cameraChange;
+    public Vector2 cameraChange = new Vector2(0.0f, 29.0f);
     public Vector3 playerChange;
     private CameraMovement cam;
     private PlayerController player;
@@ -15,6 +15,7 @@ public class RoomMove : MonoBehaviour
         cam = Camera.main.GetComponent<CameraMovement>();
         GameObject p = GameObject.FindGameObjectWithTag("Player");
         player = p.GetComponent<PlayerController>();
+
 
     }
 
