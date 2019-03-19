@@ -44,10 +44,10 @@ public class Last_room : MonoBehaviour
             cam.minPosition += cameraChange;
             cam.maxPosition += cameraChange;
             other.transform.position += playerChange;
-
+            win_popup.SetActive(true);
             pencil.one_line = 0;
             player.stopPlayer();
-            win_popup.SetActive(true);
+            
 
 
         }
