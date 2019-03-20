@@ -27,14 +27,17 @@ public class PlayerController : MonoBehaviour {
     public float movem;
     private bool pickup;
     public bool stop;
-    
+
+
     //private int itemScale = 0;
 
     private void Start()
     {
+
         //faceright = true;
         movem = 0;
         stop = false;
+
         animator = GetComponent<Animator>();
       
         speed = 0;
@@ -61,6 +64,7 @@ public class PlayerController : MonoBehaviour {
         {
             SpriteRenderer r = other.gameObject.GetComponent<SpriteRenderer>();
             r.sortingOrder = 20;
+            stopPlayer();
         }
  
 
@@ -71,8 +75,9 @@ public class PlayerController : MonoBehaviour {
         if (other.gameObject.name.Equals("warehouse_1f_walls"))
         {
            curItem = other.gameObject;
-           // grabbingItem = true;
+            // grabbingItem = true;
 
+            stopPlayer();
 
         }
     
@@ -85,12 +90,15 @@ public class PlayerController : MonoBehaviour {
         {
             SpriteRenderer r = other.gameObject.GetComponent<SpriteRenderer>();
             r.sortingOrder = 3;
+            stopPlayer();
+
         }
 
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
 
+        stopPlayer();
 
         //  Destroy(collision.gameObject);
     }
@@ -167,8 +175,7 @@ public class PlayerController : MonoBehaviour {
             {
                 //Debug.Log("dead");
                 //lineRenderer.SetPositions(new Vector3[0]);
-                if(p.one_line > 0)
-                panel.SetActive(true);
+              
 
 
                 stopPlayer();
@@ -288,6 +295,9 @@ public class PlayerController : MonoBehaviour {
         speed = 0;
         setAnime();
         drawPoints.Clear();
+        if (p.one_line > 0)
+            panel.SetActive(true);
+
         moving = false;
         p.firstPoint = 0;
     }
