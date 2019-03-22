@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Module instantiates internal "slot holders" for Inventory items
 public class ItemHolder : ScriptableObject
 {
     public ItemSlot[] itemSlots;
