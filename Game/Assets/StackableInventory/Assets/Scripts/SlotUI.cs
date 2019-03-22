@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
 
+//Module manages UI of "slot holders" in Inventory gameobject
 public class SlotUI : MonoBehaviour, IDropHandler
 {
     protected GameObject icon;
@@ -23,12 +24,13 @@ public class SlotUI : MonoBehaviour, IDropHandler
         stack = icon.transform.GetChild(0).GetComponent<TMP_Text>();
     }
 
-
+    //Gets dropped slot in Inventory gameobject
     public virtual void OnDrop (PointerEventData eventData)
     {
         droppedItemSlot = eventData.pointerDrag.GetComponent<ItemDragHandler>().GetItemSlot();
     }
 
+    //Handles drop of dragged item
     protected void HandleItemDrop (PointerEventData eventData)
     {
         //droppedItemSlot = the slot you are removing an item from
@@ -82,6 +84,7 @@ public class SlotUI : MonoBehaviour, IDropHandler
         InventoryHandler.instance.UpdateInventoryUI();
     }
 
+    //Handles drop onto empty slot
     private void DropOntoEmptySlot()
     {
         thisItemSlot.item = droppedItemSlot.item;
@@ -89,6 +92,7 @@ public class SlotUI : MonoBehaviour, IDropHandler
         droppedItemSlot.Clear();
     }
 
+    //Handles swapping of different items' UI
     protected virtual void SwapItems(PointerEventData eventData)
     {
         ItemHolder.ItemSlot tempSlot = new ItemHolder.ItemSlot(thisItemSlot.item, thisItemSlot.currentStack);
@@ -100,6 +104,7 @@ public class SlotUI : MonoBehaviour, IDropHandler
         droppedItemSlot.currentStack = tempSlot.currentStack;
     }
 
+    //Refreshes item UI in slots
     public void RefreshItemIcons()
     {
         if (thisItemSlot.item != null)
