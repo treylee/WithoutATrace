@@ -7,8 +7,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
-//File implements interfaces for inventory dragging and swapping
-
+//Module implements interfaces for dragging Inventory Item gameobjects
 public class ItemDragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
 {
     // Item that is being dragged
