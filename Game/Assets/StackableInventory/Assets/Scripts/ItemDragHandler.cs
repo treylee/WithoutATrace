@@ -40,13 +40,13 @@ public class ItemDragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler,
         return itemSlot;
     }
     
-
+    //Finds index of slot
     protected virtual void Start()
     {
         slotIndex = transform.parent.GetSiblingIndex();
     }
 
-
+    //Changes settings when touch is started
     public void OnPointerDown(PointerEventData eventData)
     {
         isDragging = true;
@@ -62,7 +62,8 @@ public class ItemDragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler,
         
         
     }
-
+    
+    //Changes settings during touch, allowing dragging UI of Inventory Items 
     public void OnDrag(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Left)
@@ -89,6 +90,7 @@ public class ItemDragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler,
         */
     }
 
+    //Changes settings when touch ends
     public void OnPointerUp(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Left)
