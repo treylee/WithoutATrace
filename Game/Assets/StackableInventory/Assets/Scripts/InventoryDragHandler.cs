@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+//Module gives drag ability when added to Inventory gameobject
 public class InventoryDragHandler : ItemDragHandler
 {
     private InventoryHandler inventoryHandler;
