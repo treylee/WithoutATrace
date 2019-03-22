@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System;
 
+//Module updates UI of inventory slots when attached to Inventory Slot gameobjects
 public class InventorySlotUI : SlotUI
 {
     
