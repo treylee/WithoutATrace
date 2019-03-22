@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Module tracks whether Inventory gameobect is full
 public class ItemInteractable : Interactable
 {
     public Item item;
