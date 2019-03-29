@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5471979186907415650}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.478, y: -0.179, z: 10}
+  m_LocalPosition: {x: -1.5, y: -0.05, z: 10}
   m_LocalScale: {x: 1.197847, y: 0.76243174, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -48,8 +48,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  anim: {fileID: 0}
   moving: 0
+  panel: {fileID: 0}
+  step: 0
   movem: 0
+  stop: 0
+  exit_popup: {fileID: 0}
 --- !u!50 &5471979186907415653
 Rigidbody2D:
   serializedVersion: 4
@@ -132,7 +137,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -219548969
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b9cc0c8eb95e3f947bd889307a012cf4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

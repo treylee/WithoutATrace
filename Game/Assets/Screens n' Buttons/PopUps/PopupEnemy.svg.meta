@@ -2,17 +2,14 @@ fileFormatVersion: 2
 guid: 23d22aead357a12419ac1ffb42450bfc
 ScriptedImporter:
   fileIDToRecycleName:
-    100000: gameObject/PopupEnemy
-    400000: gameObject/PopupEnemy/Transform
-    21200000: gameObject/PopupEnemy/SpriteRenderer
+    2800000: tex
     21300000: sprite
-    100100000: gameObject
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: a57477913897c46af95d590f580878bd, type: 3}
-  svgType: 0
+  svgType: 1
   texturedSpriteMeshType: 0
   svgPixelsPerUnit: 100
   gradientResolution: 128

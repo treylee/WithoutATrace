@@ -29,7 +29,7 @@ public class InventoryHandler : MonoBehaviour
     private void Start()
     {
         inventorySlotUIs = FindObjectsOfType<InventorySlotUI>();
-        currentInventory.ClearAllItems();
+        //currentInventory.ClearAllItems();
         previewUI = FindObjectOfType<PreviewUI>();
     }
 
