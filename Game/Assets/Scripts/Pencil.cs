@@ -51,7 +51,10 @@ public class Pencil : MonoBehaviour
 
     // Ensures only one line can be drawn per dungeon
     public int one_line;
-    
+
+    // Flag indicating line started from character
+    public bool goodStart;
+
     void Start()
     {
         // Flag indicates drawing is not occuring
@@ -85,6 +88,9 @@ public class Pencil : MonoBehaviour
         // Resets line count
         one_line = 0;
 
+        goodStart = false;
+
+
         //line.positionCount = 1;
         //line.material = m1;
 
@@ -107,8 +113,8 @@ public class Pencil : MonoBehaviour
     void Update()
     {
         // No line has been drawn yet for that dungeon
-        if (one_line == 0)
-        {
+        //if (one_line == 0)
+        //{
             // Character is not moving
             if (Input.GetMouseButton(0) && !p.moving)
             {
@@ -127,14 +133,10 @@ public class Pencil : MonoBehaviour
 
                 float radius = 3.00f;
 
-
-                //Debug.Log("Held");
-                //Vector2 mouseposition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
                 Vector3 ppos = player.transform.position;
                 start = true;
-                //Vector3 objposition = Camera.main.ScreenToWorldPoint(mouseposition);
 
-                // Checks if line is drawn starting from character
+                // Old way: Checks if line is drawn starting from character (delete this block)
                 /*
                 if (ppos.x <= castPoint.x + 1.2 && ppos.x >= castPoint.x - 1.5 && ppos.y <= castPoint.y + 1 && ppos.y >= castPoint.y - 3)
                 {
@@ -142,82 +144,59 @@ public class Pencil : MonoBehaviour
                 }
                 */
 
-                    /*
-                    if (Input.touches.any(x => x.phase == TouchPhase.Began)
+                if (Vector2.Distance(castPoint, ppos) < radius)
+                {
+                    goodStart = true;   
+
+                    // Mouse is inside the circle with the center and radius.
+                    if (!drawPoints.Contains(castPoint) && start)
                     {
-                        touch = Input.GetTouch(Input.touchCount - 1);
-                        touch.radiusVariance = 3;
-                        start = true;
-                        Debug.Log("Touchdown!!!");
+
+                        // Add mouse position to list of vectors
+                        drawPoints.Add(castPoint);
+
+                        // Increase number of vertices in line
+                        line.positionCount++;
+
+                        // Set vertex 0 to that of mouse position
+                        line.SetPosition(line.positionCount - 1, castPoint);
+
                     }
-                    */
 
-                    if (Vector2.Distance(castPoint, ppos) < radius)
+                    //Set flag to continue drawing line,
+                    //if it was started w/in radius of
+                    //character
+                    continueLine = true;
+                }
+                else
+                {
+                    if (continueLine)
                     {
-                        // Mouse is inside the circle with the center and radius.
-                        if (!drawPoints.Contains(castPoint) && start)
-                        {
+                        // Add mouse position to list of vectors
+                        drawPoints.Add(castPoint);
 
-                            // Add mouse position to list of vectors
-                            drawPoints.Add(castPoint);
+                        // Increase number of vertices in line
+                        line.positionCount++;
 
-                            // Increase number of vertices in line
-                            line.positionCount++;
-
-                            // Set vertex 0 to that of mouse position
-                            line.SetPosition(line.positionCount - 1, castPoint);
-
-                        }
-
-                        //Set flag to continue drawing line,
-                        //if it was started w/in radius of
-                        //character
-                        continueLine = true;
+                        // Set vertex 0 to that of mouse position
+                        line.SetPosition(line.positionCount - 1, castPoint);
                     }
                     else
                     {
-                        if (continueLine)
-                        {
-                            // Add mouse position to list of vectors
-                            drawPoints.Add(castPoint);
-
-                            // Increase number of vertices in line
-                            line.positionCount++;
-
-                            // Set vertex 0 to that of mouse position
-                            line.SetPosition(line.positionCount - 1, castPoint);
-                        }
-                        else
-                        {
-
-                            // Mouse is outside the circle area
-                            Debug.Log("Not in radius of player");
-
-                        }
+                        // Mouse is outside the circle area
+                        Debug.Log("Not in radius of player");
                     }
+                }
 
             }
-            /*
-            if (touch.phase == TouchPhase.Moved)
-            {
-                Vector2 pos = touch.position;
-                pos.x = (pos.x - width) / width;
-                pos.y = (pos.y - height) / height;
-                position = new Vector3(-pos.x, pos.y, 5);
-
-                // Position the cube.
-                ppos = position;
-            }
-            */
-
-            //start = true;
-            //transform.position = objposition;
 
             else if (Input.GetMouseButtonUp(0))
             {
-                // Increases drawn line count
-                one_line++;
-
+                if (goodStart)
+                {
+                    // Increases drawn line count
+                    one_line++;
+                }
 
                 if (drawing && !p.moving)
                 {
@@ -231,31 +210,10 @@ public class Pencil : MonoBehaviour
 
 
                     start = false;
-                    // line.positionCount = 0;
 
                 }
 
-                //exit_popup.SetActive(true);
             }
-
-        }
-            
-            // Checks if left mouse button (0 button) is released
             
         }
     }
-
-   /* void drawLine()
-    {
-     
-
-        for (int i = 0; i < drawPoints.Count; i++)
-        {
-            line.positionCount++;
-            line.SetPosition(i, drawPoints[i]);
-
-        }
-       // line.positionCount--;
-        //firstPoint = 0;
-        canDraw = false;
-    }*/
