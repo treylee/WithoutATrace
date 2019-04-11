@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-//Module creates a database for internal use
 public class ItemDatabase : Item
 {
     private List<Item> database = new List<Item>();

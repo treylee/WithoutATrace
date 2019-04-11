@@ -5,7 +5,6 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-//Module manages UI of preview box
 public class PreviewUI : MonoBehaviour, IPointerClickHandler
 {
     //private GameObject temp;

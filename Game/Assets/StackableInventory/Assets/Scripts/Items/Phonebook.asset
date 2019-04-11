@@ -15,4 +15,4 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 7b6ecd5270d813e42a8bb9d2e9e0270f, type: 3}
   itemType: 3
   currentStack: 1
-  maxStack: 1
+  maxStack: 3

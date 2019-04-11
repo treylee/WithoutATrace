@@ -129,21 +129,6 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    //
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        stopPlayer();
-    }
-
-    //
-    void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.name.Equals("warehouse_1f_walls"))
-        {
-            stopPlayer();
-        }
-    }
-
     private void Update()
     {
         //setAnime();
@@ -211,19 +196,6 @@ public class PlayerController : MonoBehaviour {
            
         }
 
-        /*
-        Vector2 moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        moveVelocity = moveInput.normalized * speed;
-
-        if (moveInput != Vector2.zero)
-        {
-            anim.SetBool("isRunning", true);
-        }
-        else {
-            anim.SetBool("isRunning", false);
-        }
-            */
-
         if (Input.GetKeyDown(KeyCode.L))
         {
             for (int i = 0; i < drawPoints.Count-1; i++)
@@ -233,9 +205,10 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
+        // Changes speed of character movement
         if (Input.GetMouseButton(0) && moving)
         {
-            if (Input.GetAxis("Mouse Y") < 0)
+            if (Input.GetAxis("Mouse Y") < 0 && !Inventory_Button.isPaused)
             {
                 //Code for action on mouse moving down
                 if (speed > 1)
@@ -244,7 +217,7 @@ public class PlayerController : MonoBehaviour {
                     speed = 2;
                
             }
-            if (Input.GetAxis("Mouse Y") > 0)
+            if (Input.GetAxis("Mouse Y") > 0 && !Inventory_Button.isPaused)
             {
                 //Code for action on mouse moving up
                 if (speed > 1)
@@ -263,7 +236,8 @@ public class PlayerController : MonoBehaviour {
         transform.Rotate(Vector3.up * 180);
     }
 
-    // Handles
+    // Handles change in character animation from
+    // moving to idle
     private void setAnime()
     {
         if (speed == 0 && hitObject == false)
@@ -294,25 +268,6 @@ public class PlayerController : MonoBehaviour {
             anim.SetBool("grab", false);
 
         }
-
-
-       /*  if (hitObject == true)
-        {
-            //speed = 0.3f;
-            anim.SetBool("grab", true);
-            //speed ++;
-            anim.SetBool("walking", false);
-            anim.SetBool("running", false);
-            anim.SetBool("idle", false);
-            //if animation with name "Attack" finished
-            
-
-            // stop = false;
-            // hitObject = false;
-            // anim.SetBool("turn", false);
-            //hitObject = false;
-        }        //  Destroy(collision.gameObject);
-        */
     }
 
     // Handles stopping "motion" of character animation

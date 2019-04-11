@@ -38,8 +38,6 @@ public class Pencil : MonoBehaviour
     // Character
     PlayerController p;
 
-    //UnityEngine.CharacterController p;
-
     //
     private Material m1, m2;
 

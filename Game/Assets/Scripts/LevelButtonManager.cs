@@ -9,12 +9,15 @@ public class LevelButtonManager : MonoBehaviour
     {
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        
-
-
     }
+
     public void home()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void Inventory()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

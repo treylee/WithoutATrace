@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//Module instantiates internal "slot holders" for Inventory items
 public class ItemHolder : ScriptableObject
 {
     public ItemSlot[] itemSlots;
@@ -50,10 +49,6 @@ public class ItemHolder : ScriptableObject
             previewImage = newImage;
         }
     }
-    
-
-
-
 
     // For adding an item to inventory array
     public bool AddItem (Item item)
@@ -65,7 +60,6 @@ public class ItemHolder : ScriptableObject
         // Fills first available slot
         for (int i = 0; i < itemSlots.Length; i++)
         {
-
             if (itemSlots[i].item == null)
             {
                 itemSlots[i].SetNewItem(item);
@@ -75,7 +69,6 @@ public class ItemHolder : ScriptableObject
                 hasAdded = true;
                 return hasAdded;
             }
-            
         }
 
         // Reports if all slots are already filled

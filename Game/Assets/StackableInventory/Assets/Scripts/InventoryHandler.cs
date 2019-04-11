@@ -28,8 +28,9 @@ public class InventoryHandler : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log("HAPPENING");
         inventorySlotUIs = FindObjectsOfType<InventorySlotUI>();
-        //currentInventory.ClearAllItems();
+        currentInventory.ClearAllItems();
         previewUI = FindObjectOfType<PreviewUI>();
     }
 

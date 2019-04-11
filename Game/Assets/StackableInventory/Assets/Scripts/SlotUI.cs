@@ -6,7 +6,6 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
 
-//Module manages UI of "slot holders" in Inventory gameobject
 public class SlotUI : MonoBehaviour, IDropHandler
 {
     protected GameObject icon;
@@ -24,13 +23,12 @@ public class SlotUI : MonoBehaviour, IDropHandler
         stack = icon.transform.GetChild(0).GetComponent<TMP_Text>();
     }
 
-    //Gets dropped slot in Inventory gameobject
+
     public virtual void OnDrop (PointerEventData eventData)
     {
         droppedItemSlot = eventData.pointerDrag.GetComponent<ItemDragHandler>().GetItemSlot();
     }
 
-    //Handles drop of dragged item
     protected void HandleItemDrop (PointerEventData eventData)
     {
         //droppedItemSlot = the slot you are removing an item from
@@ -39,16 +37,19 @@ public class SlotUI : MonoBehaviour, IDropHandler
         //if there's something already in the slot you are dropping into
         if (thisItemSlot.item != null)
         {
-            //if the item already in the slot and the item you are dropping are the same
+            //if the item already in the slot and the item you are dropping are the same type
             if (thisItemSlot.item == droppedItemSlot.item)
             {
+                Debug.Log("SAME TYPE");
                 //if the stack height for that pile has not been exceeded yet 
                 if (thisItemSlot.currentStack < thisItemSlot.item.maxStack)
                 {
+                    Debug.Log("STACK NOT EXCEEDED");
                     //if (size of stack you are removing) + 
                     // (size of stack you are adding to) < max size of stack for that item
                     if (droppedItemSlot.currentStack <= thisItemSlot.item.maxStack - thisItemSlot.currentStack)
                     {
+                        Debug.Log("MINUS");
                         //thisItemSlot.currentStack += droppedItemSlot.currentStack;
                         if (droppedItemSlot != thisItemSlot)
                         {
@@ -84,7 +85,6 @@ public class SlotUI : MonoBehaviour, IDropHandler
         InventoryHandler.instance.UpdateInventoryUI();
     }
 
-    //Handles drop onto empty slot
     private void DropOntoEmptySlot()
     {
         thisItemSlot.item = droppedItemSlot.item;
@@ -92,7 +92,6 @@ public class SlotUI : MonoBehaviour, IDropHandler
         droppedItemSlot.Clear();
     }
 
-    //Handles swapping of different items' UI
     protected virtual void SwapItems(PointerEventData eventData)
     {
         ItemHolder.ItemSlot tempSlot = new ItemHolder.ItemSlot(thisItemSlot.item, thisItemSlot.currentStack);
@@ -104,7 +103,6 @@ public class SlotUI : MonoBehaviour, IDropHandler
         droppedItemSlot.currentStack = tempSlot.currentStack;
     }
 
-    //Refreshes item UI in slots
     public void RefreshItemIcons()
     {
         if (thisItemSlot.item != null)
