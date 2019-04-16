@@ -57,10 +57,11 @@ public class PlayerController : MonoBehaviour {
     
     // Flag indicating 
     private bool pickup;
+    
 
     //Flag indicating whether player is stopped
     public bool stop;
-
+    public bool busy; // if engaged in dialog cannot move;
     private void Start()
     {
         movem = 0;
@@ -69,6 +70,7 @@ public class PlayerController : MonoBehaviour {
         moving = false;
         drawing = false;
         hitObject = false;
+        busy = false; 
 
         // Fetches components from this file
         // (Set in inspector)
@@ -133,7 +135,7 @@ public class PlayerController : MonoBehaviour {
     {
         //setAnime();
 
-        if (drawPoints.Count != 0)
+        if (drawPoints.Count != 0 && !busy)
         {
             if (p.drawing == false )
             {
