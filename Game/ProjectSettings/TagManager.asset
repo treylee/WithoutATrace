@@ -16,6 +16,7 @@ TagManager:
   - last_door_camer_movement
   - winning_pop_up
   - StartZone
+  - Nodes
   layers:
   - Default
   - TransparentFX

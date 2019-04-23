@@ -10,7 +10,12 @@ public class Pencil : MonoBehaviour
     private float width;
     private float height;
 
+    public Vector3 lastPosition;
+    public Vector3 currentPosition;
+
     bool continueLine;
+
+    public node node_object; 
 
     // List of vectors to hold vertices of line drawn
     public List<Vector3> drawPoints = new List<Vector3>();
@@ -53,11 +58,17 @@ public class Pencil : MonoBehaviour
     // Flag indicating line started from character
     public bool goodStart;
 
-    void Start()
+    GameObject nod;
+
+   void Start()
     {
         // Flag indicates drawing is not occuring
         drawing = false;
 
+        //set the 1st position
+        currentPosition = transform.position;
+        nod = GameObject.FindWithTag("Nodes");
+        node_object = nod.GetComponent<node>();
         //
         line_material = true;
 
@@ -107,14 +118,14 @@ public class Pencil : MonoBehaviour
         start = false;
     }
 
-    // Update is called once per frame
-    void Update()
+        // Update is called once per frame
+        void Update()
     {
         // No line has been drawn yet for that dungeon
         //if (one_line == 0)
-        //{
-            // Character is not moving
-            if (Input.GetMouseButton(0) && !p.moving)
+
+        // Character is not moving
+        if (Input.GetMouseButton(0) && !p.moving)
             {
                 // Flag indicates drawing is occuring 
                 drawing = true;
@@ -152,7 +163,7 @@ public class Pencil : MonoBehaviour
 
                         // Add mouse position to list of vectors
                         drawPoints.Add(castPoint);
-
+                       
                         // Increase number of vertices in line
                         line.positionCount++;
 
@@ -161,10 +172,11 @@ public class Pencil : MonoBehaviour
 
                     }
 
-                    //Set flag to continue drawing line,
-                    //if it was started w/in radius of
-                    //character
-                    continueLine = true;
+                   
+                //Set flag to continue drawing line,
+                //if it was started w/in radius of
+                //character
+                continueLine = true;
                 }
                 else
                 {
@@ -182,34 +194,49 @@ public class Pencil : MonoBehaviour
                     else
                     {
                         // Mouse is outside the circle area
-                        Debug.Log("Not in radius of player");
+                      //  Debug.Log("Not in radius of player");
                     }
                 }
 
             }
 
-            else if (Input.GetMouseButtonUp(0))
+            else if (Input.GetMouseButtonUp(0) && !p.moving)
             {
-                if (goodStart)
+                if (node_object.entered)
                 {
-                    // Increases drawn line count
-                    one_line++;
+                    if (goodStart)
+                    {
+                        // Increases drawn line count
+                        one_line++;
+                    }
+
+                    if (drawing && !p.moving)
+                    {
+                        // player.speed = 10;
+                        p.speed = 10;
+
+                        // Flag indicates drawing is not occuring
+                        drawing = false;
+
+                        // Debug.Log("Drawing is now false");
+                        start = false;
+
+                    }
+
+                    Debug.Log("the line ended at the node");
+                    node_object.entered = false;
                 }
 
-                if (drawing && !p.moving)
-                {
-                    // player.speed = 10;
-                    p.speed = 10;
+            else {
 
-                    // Flag indicates drawing is not occuring
-                    drawing = false;
+                //reset the line
 
-                    // Debug.Log("Drawing is now false");
+                Debug.Log("the line didnt end at the node");
+                line.positionCount = 0;
+                firstPoint = 0;
+                drawPoints.Clear();
 
-
-                    start = false;
-
-                }
+            }
 
             }
             

@@ -281,10 +281,7 @@ public class PlayerController : MonoBehaviour {
         speed = 0;
         setAnime();
         drawPoints.Clear();
-        if (p.one_line > 0)
-        {
-            panel.SetActive(true);
-        }
+     
         moving = false;
         p.firstPoint = 0;
     }
