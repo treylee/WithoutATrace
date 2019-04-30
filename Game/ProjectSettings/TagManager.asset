@@ -17,6 +17,8 @@ TagManager:
   - winning_pop_up
   - StartZone
   - Nodes
+  - Trap
+  - Trap_popup
   layers:
   - Default
   - TransparentFX

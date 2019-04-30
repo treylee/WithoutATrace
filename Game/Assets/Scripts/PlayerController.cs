@@ -58,6 +58,7 @@ public class PlayerController : MonoBehaviour {
     // Flag indicating 
     private bool pickup;
     
+    
 
     //Flag indicating whether player is stopped
     public bool stop;
@@ -76,6 +77,8 @@ public class PlayerController : MonoBehaviour {
         // (Set in inspector)
         anim = GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
+
+       // panel = GameObject.FindGameObjectsWithTag("Trap_popup");
 
         // Fetches Pencil module (another file)
         GameObject pencil = GameObject.FindGameObjectWithTag("Pencil");
@@ -98,12 +101,25 @@ public class PlayerController : MonoBehaviour {
     // with non-item object
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("trigger");
+        Animator a = other.GetComponent<Animator>();
+
+        //Debug.Log("trigger");
         if (other.gameObject.name.Equals("warehouse_1f_walls"))
         {
             SpriteRenderer r = other.gameObject.GetComponent<SpriteRenderer>();
             r.sortingOrder = 20;
             stopPlayer();
+        }
+     
+        if(other.gameObject.tag.Equals("Trap"))
+        {
+            if (a.GetBool("trap_up"))
+            {
+                //Debug.Log("Traps work");
+                panel.SetActive(true);
+                stopPlayer();
+               
+            }
         }
     }
 
@@ -111,23 +127,47 @@ public class PlayerController : MonoBehaviour {
     // of collision with non-item object
     private void OnTriggerStay2D(Collider2D other)
     {
-        Debug.Log("trigger");
+        Animator a = other.GetComponent<Animator>();
+        // Debug.Log("trigger");
         if (other.gameObject.name.Equals("warehouse_1f_walls"))
         {
            curItem = other.gameObject;
            stopPlayer();
-        }    
+            
+        }
+        if (other.gameObject.tag.Equals("Trap"))
+        {
+            if (a.GetBool("trap_up"))
+            {
+                //Debug.Log("Traps work");
+                panel.SetActive(true);
+                stopPlayer();
+
+            }
+        }
     }
 
     // Handles character movement at end of collision
     // with non-item object 
     private void OnTriggerExit2D(Collider2D other)
     {
+        Animator a = other.GetComponent<Animator>();
         if (other.gameObject.name.Equals("warehouse_1f_walls"))
         {
             SpriteRenderer r = other.gameObject.GetComponent<SpriteRenderer>();
             r.sortingOrder = 3;
             stopPlayer();
+        }
+
+        if (other.gameObject.tag.Equals("Trap"))
+        {
+            if (a.GetBool("trap_up"))
+            {
+                //Debug.Log("Traps work");
+                panel.SetActive(true);
+                stopPlayer();
+
+            }
         }
     }
 

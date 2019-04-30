@@ -22,7 +22,7 @@ public class node : MonoBehaviour
             entered = true;
             pencil.node_object = this;
         }
-        Debug.Log("Entered the node: " + entered);
+        //Debug.Log("Entered the node: " + entered);
 
     }
 

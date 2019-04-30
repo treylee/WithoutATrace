@@ -223,7 +223,7 @@ public class Pencil : MonoBehaviour
 
                     }
 
-                    Debug.Log("the line ended at the node");
+                   // Debug.Log("the line ended at the node");
                     node_object.entered = false;
                 }
 
@@ -231,7 +231,7 @@ public class Pencil : MonoBehaviour
 
                 //reset the line
 
-                Debug.Log("the line didnt end at the node");
+               // Debug.Log("the line didnt end at the node");
                 line.positionCount = 0;
                 firstPoint = 0;
                 drawPoints.Clear();
