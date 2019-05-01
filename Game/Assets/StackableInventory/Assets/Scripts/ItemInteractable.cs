@@ -10,6 +10,8 @@ public class ItemInteractable : Interactable
     {
         bool hasPickedUp = InventoryHandler.instance.currentInventory.AddItem(item);
 
+
+
         if (!hasPickedUp)
         {
             Debug.Log("Your bags are full!");
@@ -17,6 +19,7 @@ public class ItemInteractable : Interactable
         }
         else
         {
+            Debug.Log ("ITEM IN INVENTORY");
             Destroy(gameObject);
         }
     }

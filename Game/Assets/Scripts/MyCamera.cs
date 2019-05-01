@@ -11,6 +11,7 @@ public class MyCamera : MonoBehaviour
     public GameObject target;
     public Vector3 offset;
     Vector3 targetPos;
+
     // Use this for initialization
     void Start()
     {

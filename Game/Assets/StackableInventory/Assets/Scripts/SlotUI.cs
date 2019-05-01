@@ -37,16 +37,19 @@ public class SlotUI : MonoBehaviour, IDropHandler
         //if there's something already in the slot you are dropping into
         if (thisItemSlot.item != null)
         {
-            //if the item already in the slot and the item you are dropping are the same
+            //if the item already in the slot and the item you are dropping are the same type
             if (thisItemSlot.item == droppedItemSlot.item)
             {
+                Debug.Log("SAME TYPE");
                 //if the stack height for that pile has not been exceeded yet 
                 if (thisItemSlot.currentStack < thisItemSlot.item.maxStack)
                 {
+                    Debug.Log("STACK NOT EXCEEDED");
                     //if (size of stack you are removing) + 
                     // (size of stack you are adding to) < max size of stack for that item
                     if (droppedItemSlot.currentStack <= thisItemSlot.item.maxStack - thisItemSlot.currentStack)
                     {
+                        Debug.Log("MINUS");
                         //thisItemSlot.currentStack += droppedItemSlot.currentStack;
                         if (droppedItemSlot != thisItemSlot)
                         {

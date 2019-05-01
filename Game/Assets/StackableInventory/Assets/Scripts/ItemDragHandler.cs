@@ -55,39 +55,43 @@ public class ItemDragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler,
         transform.SetParent(itemHolderParent);
         GetComponent<CanvasGroup>().blocksRaycasts = false;
         
-
+        
         //offset = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        
 
+        
         RectTransformUtility.ScreenPointToLocalPointInRectangle(transform as RectTransform, (Vector2)eventData.position, null, out localPosition);
         offset = transform.position - transform.TransformPoint(localPosition);
-        
-        
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Left)
         {
-            //pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            //transform.position = pos - offset;
+            /*
+            pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            pos.z = 10.0f;
+            transform.position = pos - offset;
+            */
 
+            /*
+            Vector3 screenPoint = Input.mousePosition;
+            screenPoint.z = 100.0f; //distance of the plane from the camera
+            transform.position = Camera.main.ScreenToWorldPoint(screenPoint);
+            */
+
+            
             RectTransformUtility.ScreenPointToLocalPointInRectangle(transform as RectTransform, (Vector2)eventData.position, null, out localPosition);
             transform.position = transform.TransformPoint(localPosition) + offset;
-        }
-
-        /*
-        if (Inventory.instance.itemList[originalParent.transform.GetSiblingIndex()] != null && eventData.button == PointerEventData.InputButton.Left)
-        {
-            //Shouldn't need the two lines below, but keeping it in case of problems with drag later
-            //transform.position = Input.mousePosition;
-            //mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z);
             
-            pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-            transform.position = pos - offset;
+            
+            //transform.position.z = 10.0f;
+            //transform.position += offset;
             
         }
-        */
+
+        
+        
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -105,11 +109,11 @@ public class ItemDragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler,
             FindObjectOfType<PreviewUI>().m_Sprite = draggedImage;
             Debug.Log("got here");
             
-            string path;
-            string jsonString;
+            //string path;
+            //string jsonString;
 
-            path = Application.streamingAssetsPath + "/FlavorTexts.json";
-            jsonString = File.ReadAllText(path);
+            //path = Application.streamingAssetsPath + "/FlavorTexts.json";
+            //jsonString = File.ReadAllText(path);
             //Item CollectedItem = JsonConvert.DeserializeObject(jsonString);
         
         }
