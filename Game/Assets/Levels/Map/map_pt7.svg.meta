@@ -1,7 +1,22 @@
 fileFormatVersion: 2
 guid: 92ce147f44220924eab042054e56b852
 ScriptedImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: gameObject/map_pt7
+  - first:
+      4: 400000
+    second: gameObject/map_pt7/Transform
+  - first:
+      212: 21200000
+    second: gameObject/map_pt7/SpriteRenderer
+  - first:
+      213: 21300000
+    second: sprite
+  - first:
+      1001: 100100000
+    second: gameObject
   externalObjects: {}
   serializedVersion: 2
   userData: 
