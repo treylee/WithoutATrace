@@ -1,9 +1,13 @@
 fileFormatVersion: 2
 guid: 2e5bc6c77ba4c1a45b1a97990c980893
 ScriptedImporter:
-  internalIDToNameTable: []
+  fileIDToRecycleName:
+    100000: gameObject/map_pt5
+    400000: gameObject/map_pt5/Transform
+    21200000: gameObject/map_pt5/SpriteRenderer
+    21300000: sprite
+    100100000: gameObject
   externalObjects: {}
-  serializedVersion: 2
   userData: 
   assetBundleName: 
   assetBundleVariant: 
@@ -48,5 +52,4 @@ ScriptedImporter:
         width: 0
         height: 0
       spriteID: c5b9c36d9d576af49a8f2527b162f617
-      internalID: 0
     PhysicsOutlines: []
