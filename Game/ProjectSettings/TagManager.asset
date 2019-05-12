@@ -15,6 +15,10 @@ TagManager:
   - one_line_panel
   - last_door_camer_movement
   - winning_pop_up
+  - StartZone
+  - Nodes
+  - Trap
+  - Trap_popup
   layers:
   - Default
   - TransparentFX
