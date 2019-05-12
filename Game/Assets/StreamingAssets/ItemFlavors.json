@@ -1,0 +1,72 @@
+[
+	{
+		"itemName": "Broken Glass",
+		"itemType": "4",
+    "itemDescription": "Cracked Glass. Very Sharp."
+	},
+	{
+		"itemName": "Cereal Box Empty",
+		"itemType": "3",
+		"itemDescription": "Thin paper. Bendy."
+	},
+	{
+		"itemName": "Clamshell Packaging",
+		"itemType": "2",
+		"itemDescription": "Plastic box. Malleable. Preserves what it carries."
+	},
+	{
+		"itemName": "Eggshells",
+		"itemType": "5",
+		"itemDescription": "Organic. Rot quickly."
+	},
+	{
+		"itemName": "Foam Cup",
+		"itemType": "2",
+		"itemDescription": "Preserves heat. Carries liquids."
+	},
+	{
+		"itemName": "Glass Bottle",
+		"itemType": "4",
+		"itemDescription": "Strong and shaped with bottleneck. Breaks easily."
+	},
+	{
+		"itemName": "Glass Jar",
+		"itemType": "4",
+		"itemDescription": "Strong and cylindrical. Breaks easily. Airtight."
+	},
+	{
+		"itemName": "Metal Can",
+		"itemType": "6",
+		"itemDescription": "Crushable and cylindrical. Carries edibles."
+	},
+	{
+		"itemName": "Metal Lid",
+		"itemType": "6",
+		"itemDescription": "Sharp. Cuts edibles and plants."
+	},
+	{
+		"itemName": "Packing Peanuts",
+		"itemType": "2",
+		"itemDescription": "Fit in the palm of a human hand. Tear apart easily."
+	},
+	{
+		"itemName": "Paper Egg Carton",
+		"itemType": "3",
+		"itemDescription": "Contains depressions that can store plants and edibles."
+	},
+	{
+		"itemName": "Phonebook",
+		"itemType": "3",
+		"itemDescription": "Heavy. Can be used as paperweight."
+	},
+	{
+		"itemName": "Plastic Bottle",
+		"itemType": "2",
+		"itemDescription": "Stores liquids. Heats quickly."
+	},
+	{
+		"itemName": "Soda Can",
+		"itemType": "6",
+		"itemDescription": "Similar to metal can."
+	}
+]

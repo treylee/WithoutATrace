@@ -12,10 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccc879c289cc49b40b4d66cef91f87c6, type: 3}
   m_Name: Inventory Slot 1
   m_EditorClassIdentifier: 
-  itemName: New Item
-  itemDescription: New Description
   icon: {fileID: 0}
-  itemPrice: 0
   itemType: 0
   currentStack: 1
   maxStack: 1

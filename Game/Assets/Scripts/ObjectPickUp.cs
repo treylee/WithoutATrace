@@ -44,14 +44,14 @@ public class ObjectPickUp : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-         Debug.Log("trigger");
+         //Debug.Log("trigger");
          SpriteRenderer r = other.gameObject.GetComponent<SpriteRenderer>();
          r.sortingOrder = 20;
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("trigger");
+        //Debug.Log("trigger");
         SpriteRenderer r = other.gameObject.GetComponent<SpriteRenderer>();
         r.sortingOrder = 3;
     }
@@ -59,8 +59,9 @@ public class ObjectPickUp : MonoBehaviour
     //after we left the item do the following
     private void OnTriggerExit(Collider other)
     {
-         Debug.Log("triggerrrr exit =========================");
-         if (other.gameObject.name.Equals("Player"))
+        //Debug.Log("triggerrrr exit =========================");
+        SpriteRenderer r = other.gameObject.GetComponent<SpriteRenderer>();
+        if (other.gameObject.name.Equals("Player"))
          {
              Debug.Log("Its the player =========================");
              pickUp = false;

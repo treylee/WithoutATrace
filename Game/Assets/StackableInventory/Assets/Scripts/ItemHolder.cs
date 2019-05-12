@@ -48,7 +48,7 @@ public class ItemHolder : ScriptableObject
         {
             previewImage = newImage;
         }
-    }
+    }               
 
     // For adding an item to inventory array
     public bool AddItem (Item item)
@@ -56,13 +56,14 @@ public class ItemHolder : ScriptableObject
         // Keeps track of whether inventory is full
         bool hasAdded = false;
 
-
+        //Debug.Log("Entering\n");
         // Fills first available slot
         for (int i = 0; i < itemSlots.Length; i++)
         {
             if (itemSlots[i].item == null)
             {
                 itemSlots[i].SetNewItem(item);
+                //Debug.Log("Item:" + itemSlots[i].item);
 
                 // Update UI
                 InventoryHandler.instance.UpdateInventoryUI();

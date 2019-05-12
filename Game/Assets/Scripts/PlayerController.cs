@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour {
     // with non-item object
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("trigger");
+        //Debug.Log("trigger");
         if (other.gameObject.name.Equals("warehouse_1f_walls"))
         {
             SpriteRenderer r = other.gameObject.GetComponent<SpriteRenderer>();
@@ -109,7 +109,7 @@ public class PlayerController : MonoBehaviour {
     // of collision with non-item object
     private void OnTriggerStay2D(Collider2D other)
     {
-        Debug.Log("trigger");
+        //Debug.Log("trigger");
         if (other.gameObject.name.Equals("warehouse_1f_walls"))
         {
            curItem = other.gameObject;
@@ -282,6 +282,7 @@ public class PlayerController : MonoBehaviour {
         if (p.one_line > 0)
         {
             panel.SetActive(true);
+            FindObjectOfType<Reset_Button>().RestartGame();
         }
         moving = false;
         p.firstPoint = 0;

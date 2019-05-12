@@ -15,11 +15,18 @@ public class InventoryDragHandler : ItemDragHandler
         inventoryHandler = InventoryHandler.instance;
         itemSlot = inventoryHandler.currentInventory.itemSlots[slotIndex];
         thisPreviewSlot = inventoryHandler.currentInventory.previewSlot;
+
     }
 
     protected override void DropFromSlot()
     {
         //inventoryHandler.currentInventory.DropItem(itemSlot);
     }
+
+
+
+    
+
+
 
 }
