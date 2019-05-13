@@ -103,7 +103,7 @@ public class PlayerController : MonoBehaviour {
     {
         Animator a = other.GetComponent<Animator>();
 
-        //Debug.Log("trigger");
+        // collision with wall
         if (other.gameObject.name.Equals("warehouse_1f_walls"))
         {
             SpriteRenderer r = other.gameObject.GetComponent<SpriteRenderer>();
@@ -111,6 +111,7 @@ public class PlayerController : MonoBehaviour {
             stopPlayer();
         }
      
+     // collision with trap
         if(other.gameObject.tag.Equals("Trap"))
         {
             if (a.GetBool("trap_up"))
