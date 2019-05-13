@@ -138,7 +138,7 @@ public class Pencil : MonoBehaviour
                 Vector3 castPoint = Camera.main.ScreenToWorldPoint(mouse);
 
                 // Arbitrary value for z-axis required for Unity
-                castPoint.z = 5;
+                castPoint.z = 0;
 
                 float radius = 3.00f;
 
