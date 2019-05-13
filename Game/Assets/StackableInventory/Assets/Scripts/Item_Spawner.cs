@@ -12,7 +12,7 @@ public class Item_Spawner : Item
     void Start()
     {
         rand = Random.Range(0, Sprite_Pic.Length);
-        GetComponent<SpriteRenderer>().sprite = Sprite_Pic[rand];
+        //GetComponent<SpriteRenderer>().sprite = Sprite_Pic[rand];
         //pic = GetComponent<SpriteRenderer>().sprite;
     }
 
