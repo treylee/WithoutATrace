@@ -43,12 +43,6 @@ public class InventoryHandler : MonoBehaviour
         
     }
 
-    /*
-    public void UpdatePreviewUI()
-    {
-        previewUI.RefreshPreview();
-    }
-    */
 
     public void AddItemButton (Item item)
     {

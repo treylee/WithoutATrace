@@ -41,6 +41,6 @@ public class ItemDatabase : Item
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log("database: " + database);
     }
 }

@@ -54,7 +54,7 @@ public class Baseball_Panel : MonoBehaviour
         Debug.Log("DESCRIPTION: " + description);
 
         // Get card preview picture
-        cardPicture = gameObject.transform.Find("BaseballCard/CardPicture/PreviewPicture").GetComponent<PreviewPicture>();       
+        cardPicture = gameObject.transform.Find("BaseballCard/CardPicture/PreviewPicture").GetComponent<PreviewPicture>();
         cardPicture.m_Image.sprite = cardSprite;
 
         // Get card item name

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 448499933784855792}
   - component: {fileID: 448499933784855806}
   - component: {fileID: 448499933784855807}
-  - component: {fileID: 448499933784855805}
+  - component: {fileID: 1307993083489121211}
   m_Layer: 5
   m_Name: Slot (1)
   m_TagString: Untagged
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &448499933784855805
+--- !u!114 &1307993083489121211
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -151,6 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 0}
   itemHolderParent: {fileID: 0}
+  title: {fileID: 0}
 --- !u!114 &448499934139757340
 MonoBehaviour:
   m_ObjectHideFlags: 0

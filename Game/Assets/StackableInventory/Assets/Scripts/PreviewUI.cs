@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class PreviewUI : MonoBehaviour, IPointerClickHandler
+public class PreviewUI : MonoBehaviour
 {
     //private GameObject temp;
     public Image m_Image;
@@ -31,6 +31,7 @@ public class PreviewUI : MonoBehaviour, IPointerClickHandler
     }
     */
 
+    /*
     public void OnPointerClick(PointerEventData pointerEventData)
     {
         m_Sprite = pointerEventData.pointerPress.gameObject.GetComponent<Image>().sprite;
@@ -47,7 +48,7 @@ public class PreviewUI : MonoBehaviour, IPointerClickHandler
     {
         RefreshPreviewIcon();
     }
-
+    */
 
 
     /*

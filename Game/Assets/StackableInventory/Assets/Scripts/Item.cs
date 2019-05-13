@@ -19,14 +19,14 @@ public class Item : ScriptableObject
     public ItemTypes itemType = ItemTypes.Undefined;
     public int currentStack = 1;
     public int maxStack = 1;
-    
+
     public static explicit operator Item(GameObject v)
     {
         throw new NotImplementedException();
     }
 
 
-    // Generates a random item (in string form for JSON) 
+    // Generates a random item (in string form for JSON)
     // to be placed on top of collider in level design
     public void MakeItem()
     {
@@ -58,12 +58,12 @@ public class Item : ScriptableObject
             //itemType = (ItemTypes)int.Parse(flavors[itemNum].SelectToken("itemDescription").ToString());
             icon = Resources.Load<Sprite>(itemName);
             //Debug.Log("GETNAME: " + GetComponent<Item_Spawner>().pic.name);
-            
+
 
             //Debug.Log("name: " + itemName);
             //Debug.Log("description: " + itemDescription);
             //Debug.Log("itemType" + itemType);
-            //item.itemContamination = 
+            //item.itemContamination =
 
 
         }
@@ -123,14 +123,14 @@ public class Item : ScriptableObject
                     wantedString = objectName.ToString();
                     this.itemName = wantedString;
                     this.itemDescription = entry.SelectToken("itemDescription").ToString();
-                    
+
                     Debug.Log("wantedString: " + wantedString);
                     Debug.Log(itemDescription);
 
                     icon = Resources.Load<Sprite>(itemName);
                     break;
                 }
-                
+
                 /*
                 foreach (JProperty p in o.Properties())
                 {
@@ -179,8 +179,8 @@ public class Item : ScriptableObject
 
         /*
         randomly generate type
-        randomly generate the name based on the type, set description 
-        to prewritten string that corresponds with name, 
+        randomly generate the name based on the type, set description
+        to prewritten string that corresponds with name,
         and sprite to path that corresponds to name
         name and description and sprite and type must correspond
         price and contamination can be random
