@@ -101,7 +101,6 @@ public class PlayerController : MonoBehaviour {
     // with non-item object
     private void OnTriggerEnter2D(Collider2D other)
     {
-
         Animator a = other.GetComponent<Animator>();
 
         //Debug.Log("trigger");
@@ -117,7 +116,7 @@ public class PlayerController : MonoBehaviour {
             if (a.GetBool("trap_up"))
             {
                 //Debug.Log("Traps work");
-                panel.SetActive(true);
+                //panel.SetActive(true);
                 stopPlayer();
                
             }
@@ -128,12 +127,8 @@ public class PlayerController : MonoBehaviour {
     // of collision with non-item object
     private void OnTriggerStay2D(Collider2D other)
     {
-
-        //Debug.Log("trigger");
-
         Animator a = other.GetComponent<Animator>();
         // Debug.Log("trigger");
-
         if (other.gameObject.name.Equals("warehouse_1f_walls"))
         {
            curItem = other.gameObject;
@@ -145,7 +140,7 @@ public class PlayerController : MonoBehaviour {
             if (a.GetBool("trap_up"))
             {
                 //Debug.Log("Traps work");
-                panel.SetActive(true);
+                //panel.SetActive(true);
                 stopPlayer();
 
             }
@@ -169,7 +164,7 @@ public class PlayerController : MonoBehaviour {
             if (a.GetBool("trap_up"))
             {
                 //Debug.Log("Traps work");
-                panel.SetActive(true);
+                //panel.SetActive(true);
                 stopPlayer();
 
             }
@@ -326,14 +321,7 @@ public class PlayerController : MonoBehaviour {
         speed = 0;
         setAnime();
         drawPoints.Clear();
-
-        if (p.one_line > 0)
-        {
-            panel.SetActive(true);
-            FindObjectOfType<Reset_Button>().RestartGame();
-        }
-
-
+     
         moving = false;
         p.firstPoint = 0;
     }
