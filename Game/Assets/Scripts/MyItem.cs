@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -40,11 +41,10 @@ public class MyItem : MonoBehaviour
 
     void Start()
     {
-        itemName = gameObject.name;
         player = GameObject.FindGameObjectWithTag("Player");
 
         //inventoryObj = FindObjectOfType<InventoryHandler>();
-        inventoryObj = InventoryHandler.instance;
+        //inventoryObj = InventoryHandler.instance;
         if (inventoryObj != null)
         {
             Debug.Log("found inventory");
@@ -54,6 +54,7 @@ public class MyItem : MonoBehaviour
         grabbingItem = false;
         itemScale = 0;    
     }
+
 
     // Checks if player is close to item; handles 
     // item "animation" as part of collection of item
@@ -66,7 +67,7 @@ public class MyItem : MonoBehaviour
             // before allowing character to collect it
             if (itemScale < 20)
             {
-                Debug.Log("itemScale");
+                //Debug.Log("itemScale");
 
                 // Make the item grow in size (to give appearance of 
                 // highlighting it) before allowing character to collect it
@@ -118,7 +119,7 @@ public class MyItem : MonoBehaviour
         if (other.gameObject.tag.Equals("Player"))
         {
             //Debug.Log("Picked up an Item");
-            itemName = this.name;
+            itemName = name;
             grabbingItem = true;
             //inventoryObj.currentInventory.AddItem(item);
             //inventoryObj.UpdateInventoryUI();
@@ -132,7 +133,7 @@ public class MyItem : MonoBehaviour
         if (other.gameObject.tag.Equals("Player"))
         {
             //Debug.Log("Picked up an Item");
-            itemName = this.name;
+            itemName = name;
             grabbingItem = true;
         }
     }
@@ -143,23 +144,40 @@ public class MyItem : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("Player"))
         {
-            //item = other.gameObject.GetComponent<Item>();
-            //if (item == null)
-            //{
-            //    Debug.Log("item does not exist");
-            //}
+            Debug.Log("going");
+            if (item == null)
+            {
+                Debug.Log("item does not exist");
+            }
             //inventoryObj.currentInventory.AddItem(item);
             //inventoryObj.UpdateInventoryUI();
-            Debug.Log("Picked up an Item");
-            itemName = this.name;
+            //inventoryObj.UpdateInventoryUI();
+            //Debug.Log("Picked up an Item");
+            //itemName = name;
             grabbingItem = true;
-            InventoryHandler.instance.currentInventory.AddItem(item);
+            //item = gameObject.GetComponent<MyItem>().item;
+            //item.MakeItem();
+            //item.GenerateTitle(itemName);
+            item.GenerateTitle(itemName);
+            //item.MakeItem(itemName);
+                try
+                {
+                    //This line picks up the item.
+                    InventoryHandler.instance.currentInventory.AddItem(item);
+                }
+                catch (Exception)
+                {
+                    Debug.Log("ERROR");
+                }
+            //Debug.Log("item: " + itemName);
+            //item.GenerateTitle(itemName);
+            //item.MakeItem();
         }
     }
 
     // Fetches name of this item
     public string getName()
     {
-        return this.name;
+        return name;
     }
 }

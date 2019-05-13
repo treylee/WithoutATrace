@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Inventory_Button : MonoBehaviour
 {
-
+    
     // Flag indicating whether game is paused
     public static bool isPaused = false;
 
@@ -19,6 +19,7 @@ public class Inventory_Button : MonoBehaviour
     // Update is called once per frame
     public void ToggleInventory (bool status)
     {
+        Debug.Log("answer");
         status = isPaused;
         if (!status)
         {
