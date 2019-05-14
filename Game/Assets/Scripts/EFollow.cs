@@ -31,16 +31,17 @@ public class EFollow : MonoBehaviour
        transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime); 
 
        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right, distance);
+    
        if(hitInfo.collider != null)
        {
-            Debug.DrawLine(transform.position, hitInfo.point);
 
             if(hitInfo.collider.CompareTag("Player"))
             {
+                Debug.Log("Player tag detected");
                 follow = true;
                 p.patrol = false;
-                //speed = 15;
-                speed = p.speed * 2;
+                speed = 15;
+                //speed = p.speed * 2;
             }
        } 
        else
