@@ -19,6 +19,7 @@ TagManager:
   - Nodes
   - Trap
   - Trap_popup
+  - enemy
   layers:
   - Default
   - TransparentFX

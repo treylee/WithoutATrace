@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class PlayerController : MonoBehaviour {
 
     // Controls speed of the character
@@ -57,8 +58,10 @@ public class PlayerController : MonoBehaviour {
     
     // Flag indicating 
     private bool pickup;
-    
-    
+
+
+    public GameObject[] enemy;
+
 
     //Flag indicating whether player is stopped
     public bool stop;
@@ -92,10 +95,16 @@ public class PlayerController : MonoBehaviour {
         drawPoints = p.drawPoints;
         drawing = p.drawing;
 
-        // Miscellaneous Actions 
-        // faceright = true;
-        // backpack.transform.LookAt(Camera.main.transform.position); // make face camera so doesnt flip
-    }
+
+        //enemy game object
+        enemy = GameObject.FindGameObjectsWithTag("enemy");
+
+
+
+    // Miscellaneous Actions 
+    // faceright = true;
+    // backpack.transform.LookAt(Camera.main.transform.position); // make face camera so doesnt flip
+}
 
     // Handles character movement at instant of collision
     // with non-item object
@@ -122,6 +131,7 @@ public class PlayerController : MonoBehaviour {
                
             }
         }
+
     }
 
     // Handles character movement through duration 
@@ -174,6 +184,21 @@ public class PlayerController : MonoBehaviour {
 
     private void Update()
     {
+        foreach (GameObject target in enemy)
+        {
+            Debug.Log("enemy work1");
+            float distant = Vector2.Distance(target.transform.position, transform.position);
+            //float distantx = Mathf.Abs(target.transform.position.x - transform.position.x);
+            //float distanty = Mathf.Abs(target.transform.position.y - transform.position.y);
+            Debug.Log(distant);
+            if (distant < 3)//other.gameObject.tag.Equals("enemy"))
+            {
+                Debug.Log("enemy work2");
+                panel.SetActive(true);
+                stopPlayer();
+
+            }
+        }
         //setAnime();
 
         if (drawPoints.Count != 0 && !busy)
