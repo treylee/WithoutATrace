@@ -21117,6 +21117,7 @@ MonoBehaviour:
   distance: 20
   enemy: {fileID: 0}
   p: {fileID: 0}
+  movem: 0
 --- !u!114 &671813065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21135,6 +21136,7 @@ MonoBehaviour:
   - {fileID: 866711360}
   speed: 20
   patrol: 0
+  movem: 0
 --- !u!1 &672309446 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6704947417483999981, guid: d90aff50cd8070e4d9c82149aa612139,
@@ -43794,6 +43796,7 @@ MonoBehaviour:
   distance: 0
   enemy: {fileID: 0}
   p: {fileID: 0}
+  movem: 0
 --- !u!114 &1325575594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43814,6 +43817,7 @@ MonoBehaviour:
   - {fileID: 1896009882}
   speed: 10
   patrol: 0
+  movem: 0
 --- !u!1 &1327604630 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 854ae54f78238b24b98d9750f69490a4,
@@ -44256,6 +44260,7 @@ MonoBehaviour:
   - {fileID: 1618522853}
   speed: 10
   patrol: 0
+  movem: 0
 --- !u!114 &1344991669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44275,6 +44280,7 @@ MonoBehaviour:
   distance: 20
   enemy: {fileID: 1344991663}
   p: {fileID: 1344991668}
+  movem: 0
 --- !u!61 &1344991670
 BoxCollider2D:
   m_ObjectHideFlags: 0
