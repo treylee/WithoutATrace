@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour {
     // Controls incomplete-line popup
     public GameObject panel;
 
+    public GameObject panel_hole;
     //
     public float step;
 
@@ -122,6 +123,14 @@ public class PlayerController : MonoBehaviour {
                
             }
         }
+
+        if (other.gameObject.tag.Equals("hole"))
+        {
+            
+                //Debug.Log("Traps work");
+                panel_hole.SetActive(true);
+                stopPlayer();  
+        }
     }
 
     // Handles character movement through duration 
@@ -146,6 +155,8 @@ public class PlayerController : MonoBehaviour {
 
             }
         }
+
+
     }
 
     // Handles character movement at end of collision

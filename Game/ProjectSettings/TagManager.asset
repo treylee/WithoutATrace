@@ -19,6 +19,8 @@ TagManager:
   - Nodes
   - Trap
   - Trap_popup
+  - hole_popup
+  - hole
   layers:
   - Default
   - TransparentFX
