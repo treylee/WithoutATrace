@@ -21,6 +21,8 @@ TagManager:
   - Trap_popup
   - enemy
   - enemy_popup
+  - Other
+  - Glass
   layers:
   - Default
   - TransparentFX
