@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg34350"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="Hole_half.svg">
+  <defs
+     id="defs34344" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.1648437"
+     inkscape:cx="251.91147"
+     inkscape:cy="560"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1012"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata34347">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       transform="translate(-758.09615,-1193.1263)"
+       style="display:inline"
+       id="g34329"
+       inkscape:export-filename="C:\CS\SchoolAssignments\CMPS116-7\WithoutATraceFinal\Game\Assets\PartTwoAssets\Traps\Hole_half.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <path
+         inkscape:connector-curvature="0"
+         id="path2073-6-8-9-8"
+         transform="scale(0.26458333)"
+         d="m 3207.2773,4863.459 a 47.646278,47.646278 0 0 0 -47.6406,47.6445 v 234.7129 a 47.641251,47.641251 0 0 0 47.6406,47.6426 h 120.7598 v -330 z"
+         style="fill:#72768f;stroke-width:0.50270391" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path2075-4-5-9-5"
+         transform="scale(0.26458333)"
+         d="m 3207.2773,4911.5566 a 47.641251,47.641251 0 0 0 -47.6406,47.6407 v 186.6152 a 47.641251,47.641251 0 0 0 47.6406,47.6406 h 120.7598 v -281.8965 z"
+         style="fill:#666666;stroke-width:0.50270391" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path2077-5-3-2-7"
+         transform="scale(0.26458333)"
+         d="m 3207.2773,4959.6602 a 47.641251,47.641251 0 0 0 -47.6406,47.6425 v 138.5137 a 47.641251,47.641251 0 0 0 47.6406,47.6426 h 120.7598 v -233.7988 z"
+         style="fill:#56596b;stroke-width:0.50270391" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path2079-7-78-6-3"
+         transform="scale(0.26458333)"
+         d="m 3207.2773,5007.7598 a 47.641251,47.641251 0 0 0 -47.6406,47.6464 v 90.4102 a 47.641251,47.641251 0 0 0 47.6406,47.6426 h 120.7598 v -185.6992 z"
+         style="fill:#393b48;stroke-width:0.50270391" />
+    </g>
+  </g>
+</svg>
