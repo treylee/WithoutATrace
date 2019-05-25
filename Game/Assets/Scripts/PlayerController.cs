@@ -190,7 +190,7 @@ public class PlayerController : MonoBehaviour {
             float distant = Vector2.Distance(target.transform.position, transform.position);
             //float distantx = Mathf.Abs(target.transform.position.x - transform.position.x);
             //float distanty = Mathf.Abs(target.transform.position.y - transform.position.y);
-            Debug.Log(distant);
+            //Debug.Log(distant);
             if (distant < 3)//other.gameObject.tag.Equals("enemy"))
             {
                 Debug.Log("enemy work2");
