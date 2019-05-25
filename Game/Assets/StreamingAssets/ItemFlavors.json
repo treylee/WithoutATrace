@@ -1,0 +1,115 @@
+[
+	{
+		"itemName": "Broken Glass",
+		"itemType": "Glass",
+    "itemDescription": "Cracked Glass. Very Sharp.",
+    "maxStack": "3",
+    "itemRarity": "Star_1",
+    "itemPrice": "7"
+	},
+  {
+    "itemName": "Empty Cereal Box",
+    "itemType": "Paper",
+    "itemDescription": "Thin paper. Bendy.",
+    "maxStack": "4",
+    "itemRarity": "Star_1",
+    "itemPrice": "3"
+  },
+  {
+    "itemName": "Clamshell Packaging",
+    "itemType": "Plastic",
+    "itemDescription": "Plastic box. Malleable. Preserves what it carries.",
+    "maxStack": "2",
+    "itemRarity": "Star_1",
+    "itemPrice": "2"
+  },
+  {
+    "itemName": "Eggshells",
+    "itemType": "Compost",
+    "itemDescription": "Organic. Rot quickly.",
+    "maxStack": "3",
+    "itemRarity": "Star_2",
+    "itemPrice": "1"
+  },
+  {
+    "itemName": "Foam Cup",
+    "itemType": "Trash",
+    "itemDescription": "Preserves heat. Carries liquids.",
+    "maxStack": "5",
+    "itemContamination": "2",
+    "itemRarity": "Star_1",
+    "itemPrice": "3"
+  },
+  {
+    "itemName": "Glass Bottle",
+    "itemType": "Glass",
+    "itemDescription": "Strong and shaped with bottleneck. Breaks easily.",
+    "maxStack": "2",
+    "itemRarity": "Star_3",
+    "itemPrice": "5"
+  },
+  {
+    "itemName": "Glass Jar",
+    "itemType": "Glass",
+    "itemDescription": "Strong and cylindrical. Breaks easily. Airtight.",
+    "maxStack": "3",
+    "itemRarity": "Star_2",
+    "itemPrice": "5"
+  },
+  {
+    "itemName": "Metal Can",
+    "itemType": "Metal",
+    "itemDescription": "Crushable and cylindrical. Carries edibles.",
+    "maxStack": "6",
+    "itemRarity": "Star_3",
+    "itemPrice": "4"
+  },
+  {
+    "itemName": "Metal Lid",
+    "itemType": "Metal",
+    "itemDescription": "Sharp. Cuts edibles and plants.",
+    "maxStack": "3",
+    "itemRarity": "Star_3",
+    "itemPrice": "2"
+  },
+  {
+    "itemName": "Packing Peanuts",
+    "itemType": "Trash",
+    "itemDescription": "Fit in the palm of a human hand. Tear apart easily.",
+    "maxStack": "4",
+    "itemRarity": "Star_1",
+    "itemPrice": "0"
+  },
+  {
+    "itemName": "Paper Egg Carton",
+    "itemType": "Paper",
+    "itemDescription": "Contains depressions that can store plants and edibles.",
+    "maxStack": "2",
+    "itemRarity": "Star_2",
+    "itemPrice": "2"
+  },
+  {
+    "itemName": "Phonebook",
+    "itemType": "Paper",
+    "itemDescription": "Heavy. Can be used as paperweight.",
+    "maxStack": "3",
+    "itemRarity": "Star_2",
+    "itemPrice": "2"
+  },
+  {
+    "itemName": "Plastic Bottle",
+    "itemType": "Plastic",
+    "itemDescription": "Stores liquids. Heats quickly.",
+    "maxStack": "5",
+    "itemRarity": "Star_1",
+    "itemPrice": "2"
+  },
+  {
+    "itemName": "Soda Can",
+    "itemType": "Metal",
+    "itemDescription": "Similar to metal can.",
+    "maxStack": "3",
+    "itemRarity": "Star_3",
+    "itemPrice": "2"
+  }
+]

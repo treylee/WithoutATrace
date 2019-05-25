@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -23,6 +24,9 @@ public class ItemDragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler,
     protected ItemHolder.PreviewSlot thisPreviewSlot;
 
     private Sprite draggedImage;
+    //private TextMeshProUGUI content;
+    //public Text title;
+    public TextMeshProUGUI title;
 
     // Stores parent position when dragging, so it can snap back to it if let go
     private Transform originalParent;
@@ -35,6 +39,9 @@ public class ItemDragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler,
     private Vector3 offset;
     //to deal with z offset for UI
     private Vector2 localPosition;
+
+    bool doubleTapD = false;
+    float _doubleTapTimeD;
 
     public ItemHolder.ItemSlot GetItemSlot()
     {
@@ -62,6 +69,8 @@ public class ItemDragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler,
         
         RectTransformUtility.ScreenPointToLocalPointInRectangle(transform as RectTransform, (Vector2)eventData.position, null, out localPosition);
         offset = transform.position - transform.TransformPoint(localPosition);
+
+
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -103,19 +112,40 @@ public class ItemDragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler,
             transform.localPosition = Vector3.zero;
             offset = Vector3.zero;
             GetComponent<CanvasGroup>().blocksRaycasts = true;
-            thisPreviewSlot.previewImage = draggedImage;
             draggedImage = eventData.pointerDrag.GetComponent<ItemDragHandler>().GetItemSlot().item.icon;
+            Debug.Log("ITEM: " + eventData.pointerDrag.GetComponent<ItemDragHandler>().GetItemSlot().item.itemName);
             FindObjectOfType<PreviewUI>().m_Image.sprite = draggedImage;
             FindObjectOfType<PreviewUI>().m_Sprite = draggedImage;
-            Debug.Log("got here");
-            
-            //string path;
-            //string jsonString;
+            title = FindObjectOfType<PreviewTitle>().m_Title;
+            title.text = eventData.pointerDrag.GetComponent<ItemDragHandler>().GetItemSlot().item.itemName;
 
-            //path = Application.streamingAssetsPath + "/FlavorTexts.json";
-            //jsonString = File.ReadAllText(path);
-            //Item CollectedItem = JsonConvert.DeserializeObject(jsonString);
-        
+
+            doubleTapD = false;
+
+            #region doubleTapD
+
+            
+            if (Input.GetMouseButtonUp(0))
+            {
+                Debug.Log("in region");
+                if (Time.time < _doubleTapTimeD + .3f)
+                {
+                    doubleTapD = true;
+                    Debug.Log("tapped");
+                }
+                _doubleTapTimeD = Time.time;
+            }
+
+            #endregion
+
+            if (doubleTapD)
+            {
+                Debug.Log("double");
+                FindObjectOfType<Baseball_Panel>().ToggleCard(itemSlot.item.icon, itemSlot.item.itemName, 
+                    itemSlot.item.itemDescription, itemSlot.item.itemContamination, itemSlot.item.itemRarity, 
+                    itemSlot.item.itemType);
+            }
+
         }
     }
 
@@ -124,4 +154,8 @@ public class ItemDragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler,
         // Find the slot for this drag handler
         // and drops the item
     }
+
+
+
+
 }
