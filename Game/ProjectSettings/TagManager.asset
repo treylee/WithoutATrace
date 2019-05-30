@@ -23,6 +23,19 @@ TagManager:
   - enemy_popup
   - Other
   - Glass
+  - losePopup
+  - Metal
+  - Paper
+  - Plastic
+  - Trash
+  - Compost
+  - +1
+  - +2
+  - +3
+  - -1
+  - -2
+  - -3
+  - winPopup
   layers:
   - Default
   - TransparentFX
