@@ -23,6 +23,7 @@ TagManager:
   - enemy_popup
   - Other
   - Glass
+  - wall
   layers:
   - Default
   - TransparentFX
