@@ -36,6 +36,7 @@ TagManager:
   - -2
   - -3
   - winPopup
+  - wall
   layers:
   - Default
   - TransparentFX

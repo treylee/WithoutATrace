@@ -113,7 +113,7 @@ public class PlayerController : MonoBehaviour {
         Animator a = other.GetComponent<Animator>();
 
         // collision with wall
-        if (other.gameObject.name.Equals("warehouse_1f_walls"))
+        if (other.gameObject.tag.Equals("wall"))
         {
             SpriteRenderer r = other.gameObject.GetComponent<SpriteRenderer>();
             r.sortingOrder = 20;
