@@ -42,8 +42,12 @@ public class SpeechManager
 
     public void getDialog()
     {
+        Debug.Log("THE SPEECH MANAGER IS WORKING"+storyPoint);
+
         if (textList.Length == storyPoint)
         {
+            Debug.Log("got here" + storyPoint);
+
             textPanel.SetActive(false);
             continueButton.SetActive(false);
             player.busy = false;
