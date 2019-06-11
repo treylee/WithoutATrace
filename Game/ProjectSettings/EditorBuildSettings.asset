@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Option.unity
     guid: 4d5ac7752d3d11d42a12256715a5f1fc
+  - enabled: 1
+    path: Assets/Scenes/SortingScene.unity
+    guid: 5d1e22186cbc447fe8c3214732a73c1f
   m_configObjects: {}

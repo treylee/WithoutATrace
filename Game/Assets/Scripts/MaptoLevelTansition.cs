@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
+
 
 public class MaptoLevelTansition : MonoBehaviour
 {
@@ -16,6 +19,13 @@ public class MaptoLevelTansition : MonoBehaviour
 
 
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("sdsa");
+        SceneManager.LoadScene("Game", LoadSceneMode.Single);
+
+    }
+
     void OnMouseDown()
     {
         // load a new scene

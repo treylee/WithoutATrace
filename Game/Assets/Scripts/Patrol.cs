@@ -21,18 +21,6 @@ public class Patrol : MonoBehaviour
     private bool faceright;
     void Update()
     {
-
-        if (movem > transform.position.x && !faceright)
-        {
-            flip();
-
-        }
-        else if (movem < transform.position.x && faceright)
-        {
-            flip();
-        }
-        else { }
-        movem = transform.position.x;
         /* if(ef.follow== true)
          {
              patrol = false;
@@ -54,10 +42,5 @@ public class Patrol : MonoBehaviour
                     this.transform.position = Vector2.MoveTowards(transform.position, waypoints[current].transform.position, Time.deltaTime * speed);
         }
 
-    }
-    void flip()
-    {
-        faceright = !faceright;
-        transform.Rotate(Vector3.up * 180);
     }
 }

@@ -1,7 +1,151 @@
 fileFormatVersion: 2
 guid: 2b402f01b33b4d342a773a8de092a175
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 6587830168713879839
+    second: OldManTalk_0
+  - first:
+      213: 3766513193033201427
+    second: OldManTalk_1
+  - first:
+      213: -7466358140954008923
+    second: OldManTalk_2
+  - first:
+      213: 6447469125309481265
+    second: OldManTalk_3
+  - first:
+      213: 8089221439433002072
+    second: OldManTalk_4
+  - first:
+      213: 8248367240162516123
+    second: OldManTalk_5
+  - first:
+      213: 336785867794490263
+    second: OldManTalk_6
+  - first:
+      213: 3230952707462891062
+    second: OldManTalk_7
+  - first:
+      213: -695191581877809545
+    second: OldManTalk_8
+  - first:
+      213: -6220132205872991874
+    second: OldManTalk_9
+  - first:
+      213: -5883937567077315182
+    second: OldManTalk_10
+  - first:
+      213: 3264379530670111880
+    second: OldManTalk_11
+  - first:
+      213: -7387792667496508303
+    second: OldManTalk_12
+  - first:
+      213: 1690128797860432843
+    second: OldManTalk_13
+  - first:
+      213: -6803604206593133022
+    second: OldManTalk_14
+  - first:
+      213: 4853488027632737509
+    second: OldManTalk_15
+  - first:
+      213: -9110468767021191252
+    second: OldManTalk_16
+  - first:
+      213: 1850056597806860778
+    second: OldManTalk_17
+  - first:
+      213: 8396507617137022842
+    second: OldManTalk_18
+  - first:
+      213: 3203265984374936590
+    second: OldManTalk_19
+  - first:
+      213: -1551258260905721301
+    second: OldManTalk_20
+  - first:
+      213: -3434273750155303506
+    second: OldManTalk_21
+  - first:
+      213: 4180897842992731420
+    second: OldManTalk_22
+  - first:
+      213: -6543675292870001479
+    second: OldManTalk_23
+  - first:
+      213: 4365152471225503526
+    second: OldManTalk_24
+  - first:
+      213: 7440713764594601554
+    second: OldManTalk_25
+  - first:
+      213: 3731501808972574588
+    second: OldManTalk_26
+  - first:
+      213: 4029666109689728361
+    second: OldManTalk_27
+  - first:
+      213: -2688017623024590596
+    second: OldManTalk_28
+  - first:
+      213: -6990295847387631732
+    second: OldManTalk_29
+  - first:
+      213: -4083508665465568451
+    second: OldManTalk_30
+  - first:
+      213: -9193405727749626789
+    second: OldManTalk_31
+  - first:
+      213: -8162767966847638644
+    second: OldManTalk_32
+  - first:
+      213: -4438257816254002308
+    second: OldManTalk_33
+  - first:
+      213: -4394430691474353592
+    second: OldManTalk_34
+  - first:
+      213: -1453789521885680331
+    second: OldManTalk_35
+  - first:
+      213: -4986657440978153962
+    second: OldManTalk_36
+  - first:
+      213: 5485477763795805142
+    second: OldManTalk_37
+  - first:
+      213: -193112737327211243
+    second: OldManTalk_38
+  - first:
+      213: -3176677325479435706
+    second: OldManTalk_39
+  - first:
+      213: -3568829149338547874
+    second: OldManTalk_40
+  - first:
+      213: 559294932261396836
+    second: OldManTalk_41
+  - first:
+      213: 9012873859394995760
+    second: OldManTalk_42
+  - first:
+      213: 660731806373443300
+    second: OldManTalk_43
+  - first:
+      213: 7121852746352556247
+    second: OldManTalk_44
+  - first:
+      213: -892297215483313850
+    second: OldManTalk_45
+  - first:
+      213: 7947791534455875402
+    second: OldManTalk_46
+  - first:
+      213: -4596546576710177451
+    second: OldManTalk_47
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,14 +184,14 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -69,9 +213,535 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: OldManTalk_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 3567
+        width: 618
+        height: 518
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a2474997b201e44eaada80e7c805b68
+      internalID: 6587830168713879839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldManTalk_2
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 3567
+        width: 618
+        height: 518
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed2dc146ff854c44687866c64ce2bb71
+      internalID: -7466358140954008923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldManTalk_4
+      rect:
+        serializedVersion: 2
+        x: 1271
+        y: 3567
+        width: 618
+        height: 518
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16517c17c5d3b164d9300212e36e9cdc
+      internalID: 8089221439433002072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldManTalk_6
+      rect:
+        serializedVersion: 2
+        x: 1903
+        y: 3567
+        width: 616
+        height: 518
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a870fa46fbc7bb541a31b1faec4a6534
+      internalID: 336785867794490263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldManTalk_8
+      rect:
+        serializedVersion: 2
+        x: 2533
+        y: 3565
+        width: 614
+        height: 520
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ee422d748ded8949b1406b82d86dbb4
+      internalID: -695191581877809545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldManTalk_10
+      rect:
+        serializedVersion: 2
+        x: 3161
+        y: 3565
+        width: 608
+        height: 520
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 275ac084637d0894eb67dd1464929cab
+      internalID: -5883937567077315182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldManTalk_12
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 3031
+        width: 600
+        height: 526
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 740ec928b53600b42a39e59c9bf9fbce
+      internalID: -7387792667496508303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldManTalk_14
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 3029
+        width: 596
+        height: 526
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c44f3f7d8ade1448982501a101c5732
+      internalID: -6803604206593133022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldManTalk_16
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 3029
+        width: 594
+        height: 526
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90dccf96717a5204f87225f675eda707
+      internalID: -9110468767021191252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldManTalk_18
+      rect:
+        serializedVersion: 2
+        x: 1865
+        y: 3029
+        width: 592
+        height: 526
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72a637a3f780df47a6bc08306515f66
+      internalID: 8396507617137022842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldManTalk_20
+      rect:
+        serializedVersion: 2
+        x: 2479
+        y: 3027
+        width: 592
+        height: 528
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c672d7f15a5a2c47833d4abee7f7d6f
+      internalID: -1551258260905721301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldManTalk_22
+      rect:
+        serializedVersion: 2
+        x: 3095
+        y: 3027
+        width: 592
+        height: 528
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8978deebb4ba0254281563030e577ce4
+      internalID: 4180897842992731420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldManTalk_24
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 2493
+        width: 593
+        height: 526
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5e8e20828cf1e24c9d90dbd540d49e6
+      internalID: 4365152471225503526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldManTalk_26
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 2491
+        width: 592
+        height: 528
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32fe2820108e1104593c2eec095994f5
+      internalID: 3731501808972574588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldManTalk_28
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 2493
+        width: 594
+        height: 526
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 247d3a1e18b06c34d949cfb0c53f779c
+      internalID: -2688017623024590596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldManTalk_30
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 2493
+        width: 598
+        height: 526
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf56fa492599b4347808e8eece34f6ab
+      internalID: -4083508665465568451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldManTalk_32
+      rect:
+        serializedVersion: 2
+        x: 2473
+        y: 2495
+        width: 600
+        height: 524
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24bd7c4bc75a12e41ac18ea2a70ac0a5
+      internalID: -8162767966847638644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldManTalk_34
+      rect:
+        serializedVersion: 2
+        x: 3093
+        y: 2497
+        width: 606
+        height: 524
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44c7403f50bd5074c9bb6836093352b4
+      internalID: -4394430691474353592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldManTalk_36
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1963
+        width: 610
+        height: 522
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 290ed06c592a420438d7675b5848afce
+      internalID: -4986657440978153962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldManTalk_38
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 1965
+        width: 614
+        height: 520
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 036eadb2c0af34a499f3861cb083be8e
+      internalID: -193112737327211243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldManTalk_40
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 1965
+        width: 614
+        height: 518
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f695d5261c4b834a8c05951368b4b31
+      internalID: -3568829149338547874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldManTalk_42
+      rect:
+        serializedVersion: 2
+        x: 1897
+        y: 1965
+        width: 616
+        height: 518
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17bceb25d124ae748929000a7b735b43
+      internalID: 9012873859394995760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldManTalk_44
+      rect:
+        serializedVersion: 2
+        x: 2532
+        y: 1970
+        width: 618
+        height: 518
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3badd7bc149ac7b4486a2d8c2294eb6d
+      internalID: 7121852746352556247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OldManTalk_46
+      rect:
+        serializedVersion: 2
+        x: 3162
+        y: 1965
+        width: 618
+        height: 518
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9be330cb5ce5864dbd4f630b36e9f36
+      internalID: 7947791534455875402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
